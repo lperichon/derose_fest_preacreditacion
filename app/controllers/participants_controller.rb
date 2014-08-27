@@ -31,6 +31,8 @@ class ParticipantsController < ApplicationController
       redirect_to new_participant_url, notice: "Pre-acreditación exitosa!"
     else
       @accounts = PadmaAccount.all
+      flash[:alert] = "Error en el formulario"
+
       render action: :new, layout: "layout_for_new_only"
     end
   end

@@ -63,3 +63,20 @@ es:
   navbar:
     title: "Convenios"
     new_deal: "Nuevo convenio"
+  activerecord:
+    errors:
+      models:
+        participant:
+          attributes:
+            first_name:
+              blank: "Incompleto"   
+            last_name:
+              blank: "Incompleto"   
+            identification:
+              taken: "Ya fue pre-acreditado"
+              blank: "Incompleto"
+            email:
+              taken: "Ya fue pre-acreditado"
+              blank: "Incompleto"
+            account_name:
+              blank: "Incompleto"      

@@ -11,6 +11,7 @@ class Participant < ActiveRecord::Base
 
   belongs_to :account, foreign_key: :local_account_id
   validates_presence_of :account, :first_name, :last_name, :identification, :email, :account_name
+  validates_uniqueness_of :identification, :email
 
   before_validation :set_account
 
