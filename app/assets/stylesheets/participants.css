@@ -56,7 +56,7 @@ button {
 }
 
 #public{
-	background: url(header.jpg) repeat;
+	background: url('/assets/header.jpg') repeat;
 }
 
 .page-header {
