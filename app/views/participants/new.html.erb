@@ -1,0 +1,37 @@
+<%= semantic_form_for @participant, html: {class: 'form-horizontal'} do |f| -%>
+  <%= f.semantic_errors %>
+  <%= f.inputs :name, class: 'inline' do %>
+  	<%= f.input :first_name, placeholder: "Nombre" %>
+  	<%= f.input :last_name, placeholder: "Apellido" %>
+  <% end %>
+  <%= f.inputs :data, class: 'full' do -%>
+    
+      <%= f.input :identification, placeholder: "Documento" %>
+      <%= f.input :identification, placeholder: "Email" %>
+    
+      <%= f.input :account_name, as: :select, :input_html => { 'data-placeholder' => "Escuela"}, collection: Hash[@accounts.map{|b| [b.full_name, b.name]}] %>
+  <%- end -%>
+  
+  <%= f.actions do %>
+  	<p class="disclaimer">Al enviar este formulario, está aceptando los <a href="#" data-toggle="modal" data-target="#terms">Terminos y Condiciones</a> para el DeRose Festival Buenos Aires 2014.</p>
+    <%= f.action :submit, :as => :button, :label => 'Aceptar' %>
+  <% end %>
+
+<%- end -%>
+
+<div id="terms" class="terms modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Autorización para publicar mi imagen</h4>
+      </div>
+      <div class="modal-body">
+        <p>Autorizo al Profesor DeRose, a la Red DeRose, al Profesor Edgardo Caramella y a FIPPYBA a utilizar, a título gratuito, las fotos e imágenes en las que aparezca, que sean obtenidas en el marco del Festival del Método DeRose de Buenos Aires, como deseen hacerlo, pudiendo publicarlas en libros, revistas, diarios, pósters, postales, propagandas, programas de TV, internet, etc. Esta autorización es irrevocable y la concedo por tiempo indeterminado, con plena y total conformidad, no teniendo nada que reclamar en el futuro.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
