@@ -4,6 +4,12 @@ class ParticipantsController < ApplicationController
 
   skip_authorize_resource :only => [:new, :create]
 
+  skip_before_filter :authenticate_user!, :only => [:new, :create]
+  skip_before_filter :require_padma_account, :only => [:new, :create]
+  skip_before_filter :set_current_account, :only => [:new, :create]
+  skip_before_filter :set_timezone, :only => [:new, :create]
+  skip_before_filter :set_locale, :only => [:new, :create]
+
   respond_to :html
 
   def index
