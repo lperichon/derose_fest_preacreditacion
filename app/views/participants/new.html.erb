@@ -7,7 +7,7 @@
   <%= f.inputs :data, class: 'full' do -%>
     
       <%= f.input :identification, placeholder: "Documento" %>
-      <%= f.input :identification, placeholder: "Email" %>
+      <%= f.input :email, placeholder: "Email" %>
     
       <%= f.input :account_name, as: :select, :input_html => { 'data-placeholder' => "Escuela"}, collection: Hash[@accounts.map{|b| [b.full_name, b.name]}] %>
   <%- end -%>

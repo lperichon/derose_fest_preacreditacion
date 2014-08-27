@@ -28,7 +28,7 @@ class ParticipantsController < ApplicationController
   def create
     @participant = Participant.new(participant_params)
     if @participant.save
-      redirect_to participants_url, notice: "Succes!"
+      redirect_to new_participant_url, notice: "Pre-acreditación exitosa!"
     else
       @accounts = PadmaAccount.all
       render action: :new, layout: "layout_for_new_only"
