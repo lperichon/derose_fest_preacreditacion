@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Convenios::Application.load_tasks
+DeRoseFestPreAcreditacion::Application.load_tasks
