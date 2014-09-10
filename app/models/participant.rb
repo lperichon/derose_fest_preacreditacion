@@ -15,6 +15,8 @@ class Participant < ActiveRecord::Base
 
   before_validation :set_account
 
+  after_create :send_welcome_email
+
   def self.query(query_string)
     if query_string.blank?
       self.scoped
@@ -30,5 +32,8 @@ class Participant < ActiveRecord::Base
     self.account = Account.find_or_create_by_name(:name => self.account_name) if @account_name
   end
 
+  def send_welcome_email
+    WelcomeMailer.welcome(self).deliver
+  end
 
 end
