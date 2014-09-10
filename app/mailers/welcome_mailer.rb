@@ -1,5 +1,5 @@
 class WelcomeMailer < MandrillMailer::TemplateMailer	
-  default from: 'DeRose Festival BA <decana.ar@metododerose.org>'
+  default from: 'decana.ar@metododerose.org'
 
   def welcome(participant)
   	mandrill_mail template: 'welcome',
