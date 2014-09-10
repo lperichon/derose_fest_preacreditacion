@@ -3,3 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $("#participant_account_name").chosen();
+$('#participants').dataTable( {
+        "columnDefs": [
+            { "orderable": false, "targets": 5 }
+        ]
+    });

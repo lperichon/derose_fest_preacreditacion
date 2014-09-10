@@ -10,6 +10,7 @@
  *
  *= require formtastic-bootstrap
  *= require chosen_v1.1.0/chosen.min.css
+ *= require DataTables-1.10.2/media/css/jquery.dataTables.min
  *= require_self
  *= require_tree .
  */

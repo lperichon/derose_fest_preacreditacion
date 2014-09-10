@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require chosen_v1.1.0/chosen.jquery.min
+//= require DataTables-1.10.2/media/js/jquery.dataTables.min
 //= require_tree .
