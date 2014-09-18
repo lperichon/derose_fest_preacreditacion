@@ -1,7 +1,7 @@
 class ReminderMailer < ActionMailer::Base
   default from: "decana.ar@metododerose.org"
 
-  def welcome(participant)
+  def remind(participant)
     mail to:      participant.email,
          from:    "\"DeRose Festival BA\" <decana.ar@metododerose.org>",
          subject: 'Bienvenido al XI DeRose Festival de Buenos Aires'
