@@ -4,7 +4,7 @@ class WelcomeMailer < ActionMailer::Base
   def welcome(participant)
     mail to:      participant.email,
          from:    "\"DeRose Festival BA\" <decana.ar@metododerose.org>",
-         subject: 'Bienvenido al XI DeRose Festival de Buenos Aires'
+         subject: 'Bienvenido al XII DeRose Festival de Buenos Aires'
     headers['X-MC-MergeVars'] = "{\"name\":\"#{participant.first_name}\"}" # variables
     headers['X-MC-Template'] = "welcome"  # template
     headers['X-MC-AutoText'] = 1 # generate text version
