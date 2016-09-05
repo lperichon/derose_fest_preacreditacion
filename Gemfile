@@ -25,8 +25,8 @@ gem 'twitter-bootstrap-rails'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 
-gem 'accounts_client', '~> 0.0.19'
-gem 'nucleo_client', '~> 0.0.3'
+gem 'accounts_client'
+gem 'nucleo_client'
 
 gem 'mandrill_mailer'
 
