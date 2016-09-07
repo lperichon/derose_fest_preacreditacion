@@ -82,11 +82,11 @@ DeRoseFestPreAcreditacion::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
-      :port =>           '587',
-      :address =>        'smtp.mandrillapp.com',
-      :user_name =>      ENV['MANDRILL_USERNAME'],
-      :password =>       ENV['MANDRILL_APIKEY'],
-      :domain =>         'heroku.com',
+      :port =>           ENV['MAILGUN_SMTP_PORT'],
+      :address =>        ENV['MAILGUN_SMTP_SERVER'],
+      :user_name =>      ENV['MAILGUN_SMTP_LOGIN'],
+      :password =>       ENV['MAILGUN_SMTP_PASSWORD'],
+      :domain =>         ENV['MAILGUN_DOMAIN'],
       :authentication => :plain
   }
   config.action_mailer.delivery_method = :smtp
