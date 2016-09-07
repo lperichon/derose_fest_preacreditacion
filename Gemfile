@@ -28,8 +28,6 @@ gem 'formtastic-bootstrap'
 gem 'accounts_client'
 gem 'nucleo_client'
 
-gem 'mandrill_mailer'
-
 group :development, :test do
   gem 'sqlite3'
 

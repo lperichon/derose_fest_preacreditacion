@@ -76,7 +76,6 @@ GEM
     ethon (0.4.2)
       ffi (~> 1.0.11)
       mime-types (~> 1.18)
-    excon (0.39.5)
     execjs (2.0.0)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
@@ -123,13 +122,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mandrill-api (1.0.52)
-      excon (>= 0.16.0, < 1.0)
-      json (>= 1.7.7, < 2.0)
-    mandrill_mailer (0.4.8)
-      actionpack
-      activesupport
-      mandrill-api (~> 1.0.9)
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.12.1)
@@ -241,7 +233,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
-  mandrill_mailer
   nucleo_client
   pg
   protected_attributes
